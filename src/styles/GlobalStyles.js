@@ -1,4 +1,6 @@
-:root {
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle` :root {
   /* Indigo */
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
@@ -61,9 +63,7 @@
   margin: 0;
 
   /* Creating animations for dark mode */
-  transition:
-    background-color 0.3s,
-    border 0.3s;
+  transition: background-color 0.3s, border 0.3s;
 }
 
 html {
@@ -74,9 +74,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color-grey-700);
 
-  transition:
-    color 0.3s,
-    background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
@@ -144,8 +142,8 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
-/*
-FOR DARK MODE
+
+/* FOR DARK MODE
 
 --color-grey-0: #18212f;
 --color-grey-50: #111827;
@@ -181,5 +179,7 @@ FOR DARK MODE
 --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.4);
 
 --image-grayscale: 10%;
---image-opacity: 90%;
-*/
+--image-opacity: 90%; */
+`;
+
+export default GlobalStyles;
